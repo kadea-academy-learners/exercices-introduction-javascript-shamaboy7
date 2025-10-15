@@ -1,7 +1,7 @@
-let ageEnfant = 7;
-let agePère = 14;
-let ageMère = 9;
-let ageGrandPère = 21;
-let ageOncle = 24;
+let ageEnfant = 6;
+let agePere = 12;
+let ageMere = 7;
+let ageGrandPere = 17;
+let ageOncle = 22;
 
 
