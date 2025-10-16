@@ -1,5 +1,3 @@
-
-
 const salaireMensuel = 500;
 const loyer = salaireMensuel * 0.3;
 let nourriture = salaireMensuel * 0.2;
@@ -9,8 +7,8 @@ let transport = salaireMensuel * 0.1;
 let totalDepenses = loyer + nourriture + transport + autresDepenses;
 let reste = salaireMensuel - totalDepenses;
 let loisirs = salaireMensuel * 0.15;
-totalDepenses = loyer + nourriture + transport + autresDepenses + loisirs;
-reste = salaireMensuel - totalDepenses
+let totalDepensesAvecLoisirs = loyer + nourriture + transport + autresDepenses + loisirs;
+let resteAvecLoisirs = salaireMensuel - totalDepensesAvecLoisirs;
 
 let pourcentageLoyer =  loyer / salaireMensuel * 100;
 console.log("le pourcentage du loyer est de : " + pourcentageLoyer + "%");
@@ -29,19 +27,20 @@ if(reste >= 100){
   console.log("Attention, budget serré");
 }
 
-const augmentation = salaireMensuel * 0.1;
-salaireMensuel = augmentation + salaireMensuel;
-loyer = salaireMensuel * 0.3;
-nourriture = salaireMensuel * 0.2;
-autresDepenses = 75;
-transport = salaireMensuel * 0.1;
-loisirs = salaireMensuel * 0.15;
-totalDepenses = loyer + nourriture + autresDepenses + transport + loisirs;
-reste = salaireMensuel - totalDepenses;
+//Augentation de 10%
+let augmentation = salaireMensuel * 0.1;
+let nouveauSalaire = augmentation + salaireMensuel;
+let nouveauLoyer = nouveauSalaire * 0.3;
+let nouvelleNourriture = nouveauSalaire * 0.2;
+let nouvelleAutresDepenses = 75;
+let nouveauTransport = nouveauSalaire * 0.1;
+let nouveauxLoisirs = nouveauSalaire * 0.15;
+let nouveauTotalDepenses = nouveauLoyer + nouvelleNourriture + nouveauTransport + nouveauxLoisirs + nouvelleAutresDepenses;
+let nouveauReste = nouveauSalaire - nouveauTotalDepenses;
 
-if(totalDepenses > salaireMensuel * 0.9){
+if(nouveauTotalDepenses > nouveauSalaire * 0.9){
   console.log("Dépenses trop élevées, réduisez vos charges");
 }
-
+module.exports = { salaireMensuel, loyer, totalDepenses, nourriture, transport, autresDepenses, reste, augmentation, nouveauSalaire, nouveauTotalDepenses, nouveauReste };
 
 
