@@ -9,11 +9,11 @@ let paul = partOne;
 let marie = partOne;
 let alain = partOne
 let eric = alain / 2;
-let claire = alain / 2;
+let clair = alain / 2;
 console.log("Paul aura " + paul + "CDF");
 console.log("marie aura " + marie + "CDF");
 console.log("eric aura " + eric + "CDF");
-console.log("claire aura " + claire + "CDF")
+console.log("clair aura " + clair + "CDF")
 let partTwo = secondCategory / 3;
 let madameMukuna = partTwo;
 let joseph = partTwo;
@@ -21,3 +21,4 @@ let sarah = partTwo;
 console.log("Madame Mukuna aura " + partTwo + "CDF");
 console.log("Joseph aura " + partTwo + "CDF");
 console.log("Sarah aura " + partTwo + " CDF");
+module.exports = { paul, marie, eric, clair,madameMukuna, joseph, sarah, };
